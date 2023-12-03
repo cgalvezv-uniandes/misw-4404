@@ -125,9 +125,9 @@ public class Restaurante {
         productosPedido3.add(productos.get(2));
 
         ArrayList<Pedido> pedidos = new ArrayList<>();
-        pedidos.add(new Pedido(usuarios.get(0), productosPedido1));
-        pedidos.add(new Pedido(usuarios.get(0), productosPedido2));
-        pedidos.add(new Pedido(usuarios.get(1), productosPedido3));
+        pedidos.add(new Pedido(productosPedido1));
+        pedidos.add(new Pedido(productosPedido2));
+        pedidos.add(new Pedido(productosPedido3));
 
         ArrayList<Pedido> pedidosUsuario1 = new ArrayList<>();
         pedidosUsuario1.add(pedidos.get(0));
