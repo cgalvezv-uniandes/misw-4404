@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Project coordinates -->
+    <groupId>com.misw4404</groupId>
+    <artifactId>misw-4404</artifactId>
+    <version>1.0.0</version>
+
+    <!-- Other project configurations -->
+
+    <!-- Build configuration -->
+    <build>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <!-- Maven Surefire Plugin (for running tests) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+                <!-- Additional configuration for running tests if needed -->
+            </plugin>
+
+            <!-- SonarCloud Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.0.2184</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- SonarCloud configuration -->
+    <properties>
+        <sonar.organization>cgalvezv-uniandes</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <!-- Project Key in SonarCloud -->
+        <sonar.projectKey>92c388d553fa5b856796159f18f6e863a952ca28</sonar.projectKey>
+        <!-- Display name for your project in SonarCloud -->
+        <sonar.projectName>misw-4404</sonar.projectName>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
+        <sonar.exclusions>**/*.java</sonar.exclusions>
+    </properties>
+</project>
